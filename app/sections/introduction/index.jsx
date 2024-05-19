@@ -16,10 +16,14 @@ export function WelcomeSection() {
 
 	let [count, setCount] = useState(0);
 	const [text] = useState([
-		"build Flutter apps for Android/iOS",
+		"build react native apps for Android/iOS",
 		"convert design into modern UI",
 		"build interactive UI using React",
-		"develop websites using Next.js"
+		"develop websites using Next.js",
+		"develop websites using Angulat.js",
+		"build backend services with Node.js",
+		"create and manage databases with MongoDB",
+		"work with relational databases using SQL"
 	]);
 
 	const onClick = (e) => scrollToEl(e);
@@ -52,7 +56,7 @@ export function WelcomeSection() {
 							}}
 						>
 							<p>
-								Hi, I&apos;m <mark>Vasile</mark> a <mark>passionate</mark> software developer.
+								Hi, I&apos;m <mark>Hussain</mark> a <mark>passionate</mark> full stack developer.
 							</p>
 						</h1>
 
