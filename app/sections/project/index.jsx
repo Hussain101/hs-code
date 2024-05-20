@@ -34,7 +34,7 @@ export function ProjectsSection() {
 		<LazyMotion features={domAnimation}>
 			<section id="projects" className="section">
 			<HeadingDivider title="PROJECTS" />
-			<div className="flex gap-6 mt-10 justify-center">
+			<div className="flex gap-6 mt-10 justify-center flex-wrap">
 				{
 					projects.map((item) =>{
 						return(
