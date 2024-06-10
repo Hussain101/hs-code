@@ -11,7 +11,7 @@ export const SOCIAL_MEDIA = [
 		id: "github",
 		icon: <BsGithub />,
 		title: "Visit Github profile",
-		url: "https://github.com/Hussain101r"
+		url: "https://github.com/Hussain101"
 	},
 	{
 		id: "mail",
