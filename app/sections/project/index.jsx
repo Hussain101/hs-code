@@ -1,6 +1,7 @@
 import { HeadingDivider } from "components";
 import { domAnimation, LazyMotion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { BsLink } from "react-icons/bs";
 export function ProjectsSection() {
     const projects = [
@@ -38,13 +39,13 @@ export function ProjectsSection() {
 				{
 					projects.map((item) =>{
 						return(
-							<div key={item.id} className="flex flex-col gap-2 items-center">
+							<Link href={`/sections/project/${item.name}`} key={item.id} className="flex flex-col gap-2 items-center">
 							<div className="rounded-t-lg w-[300px] h-[150px] bg-white overflow-hidden">
 								{item.image}
 							</div>
-							<p className="text-lg font-semibold mt-2 text-center flex items-center justify-center gap-1">{item.name} <BsLink /> </p>
+							<p className="hover:underline text-lg font-semibold mt-2 text-center flex items-center justify-center gap-1 cursor-pointer">{item.name}  <BsLink /> </p>
 							<p className="w-[250px] text-center">{item.desc}</p>
-						</div>
+						</Link>
 						)
 					})
 				}
