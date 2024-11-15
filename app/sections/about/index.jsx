@@ -25,31 +25,13 @@ export function AboutSection() {
 						}}
 					>
 						<p>
-							My name is Hussain. I successfully graduated Technical University of Moldova, computer
-							science faculty.
+							A seasoned Computer Engineer with over two years of experience as a Full Stack Web Developer, specializing
+in React.js, Node.js, Next.js, and Angular.js. Proficient in creating dynamic, responsive web applications with
+a strong understanding of both front-end and back-end technologies. Demonstrated expertise in UI/UX design
+and server-side development, building robust, scalable solutions. Skilled in problem-solving, debugging, and
+optimizing code for performance. Passionate about staying updated with industry trends to deliver cuttingedge applications. Committed to collaborative development and effective communication within crossfunctional teams
 						</p>
-						<p>
-							During my university years, I developed a deep passion for web programming, and I
-							consistently engaged in learning new concepts and techniques in this field.
-						</p>
-						<p>So, officially, my programming journey began in 2019 as a html/css developer.</p>
-						<p className="my-3.5">
-							I enjoy learning technologies that interest me, which is why I dedicated a significant
-							amount of time to working with WordPress.
-						</p>
-						<p>
-							One day, I decided to try something new, and I started learning React. I was so
-							excited to see how fast I can build a website with it, and how easy it is to maintain
-							it. Consequently, I quickly learnt Next.js, furthermore I also learn nodejs, expressjs
-							and database like mongodb, postgres and also learnt tools like firebase and supabase.
-						</p>
-						<p className="my-3.5">
-							In July 2023, I was hired as a Full Stack Developer at a company named Digitalux. My
-							role involves creating and maintaining web applications using technologies such as
-							React, Next, Node.js, and MongoDB. I collaborate with a talented team to develop scalable
-							solutions, ensuring optimal performance and enhancing user experiences through
-							innovative features and robust backend services.
-						</p>
+						
 					</div>
 				</div>
 
