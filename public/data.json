@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "Feedback Management",
+      "description": "Gathering feedback, especially in video format, was time-consuming and required multiple tools, adding complexity to the process."
+    },
+    {
+      "id": 2,
+      "title": "Customizable Forms",
+      "description": "Easily design forms tailored to your feedback collection needs."
+    },
+    {
+      "id": 3,
+      "title": "Multiple Project Management",
+      "description": "Manage multiple projects seamlessly within the same platform."
+    },
+    {
+      "id": 4,
+      "title": "Import Feedback",
+      "description": "Quickly import feedback from various sources to streamline workflows."
+    },
+    {
+      "id": 5,
+      "title": "Notification System",
+      "description": "Stay updated with real-time notifications about feedback and project updates."
+    },
+    {
+      "id": 6,
+      "title": "Custom Branding",
+      "description": "Add your branding elements for a personalized platform experience."
+    },
+    {
+      "id": 7,
+      "title": "Display Widgets",
+      "description": "Use widgets to display key insights and updates on your dashboard."
+    },
+    {
+      "id": 8,
+      "title": "AI Analyzer",
+      "description": "Leverage AI to analyze and summarize client feedback efficiently."
+    }
+  ]
+  
