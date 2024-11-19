@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const page = () => {
 	const [activeFeature, setActiveFeature] = useState(0);
 	const [feature, setFeature] = useState(null);
-
+    const pathname = usePathname()
 	useEffect(() => {
 		const fetchFeature = async () => {
 			// Fetch the JSON file
