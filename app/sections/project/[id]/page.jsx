@@ -8,8 +8,12 @@ const page = () => {
 	const [activeFeature, setActiveFeature] = useState(0);
 	const [feature, setFeature] = useState(null);
     const pathname = usePathname()
+    console.log("🚀 ~ page ~ pathname:", pathname)
+	let segments = pathname.split("/"); // Split the path into an array
+    let projectId = segments[segments.length - 1];
+	console.log("🚀 ~ page ~ projectId:", projectId)
 	useEffect(() => {
-		const fetchFeature = async () => {
+		const fetchFeature = async (id) => {
 			// Fetch the JSON file
 			const res = await fetch("/data.json");
 			const data = await res.json();
@@ -73,7 +77,9 @@ const page = () => {
 			<div className="">
 				{/* header image */}
 				<div className="w-full items-center justify-center flex my-12">
-					<div className="h-[440px] w-full md:w-[80%] bg-red-500"></div>
+					<div className="h-[440px] w-full md:w-[80%]">
+					<img  src={"https://digitalux.pk/wp-content/uploads/2024/10/Sheppard-2048x721.jpg"} className="w-[100%] h-[100%]" alt="HEADER" />
+					</div>
 				</div>
 				<div className="md:max-w-[80%] mx-auto p-6 text-white shadow-md rounded-lg ">
 					<h1 className="text-2xl md:text-3xl font-bold mb-4">
