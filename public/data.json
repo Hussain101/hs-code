@@ -1,8 +1,55 @@
 [
     {
       "id": 1,
-      "title": "Feedback Management",
-      "description": "Gathering feedback, especially in video format, was time-consuming and required multiple tools, adding complexity to the process."
+      "title": "Sheppardd",
+      "subtitle":"",
+      "duration":"Ongoing (Continuously developing and improving the platform)",
+      "description": "Sheppard.io is a feedback management platform designed to empower freelancers, business owners, and agencies to seamlessly collect, manage, and analyze client feedback and testimonials. The platform focuses on providing tailored solutions for capturing insights, ensuring businesses can improve client relationships and showcase positive testimonials effectively.",
+      "website_url":"https://www.sheppardd.io/",
+      "Responsibilities":[
+        "Design and implement core features of the feedback management platform.",
+        "Ensure the platform is intuitive and user-friendly for business owners and freelancers.",
+        "Develop tools for clients to easily collect and analyze feedback.",
+        "Continuously improve the user experience based on client feedback and analytics.",
+        "Collaborate with designers and developers to maintain a consistent and scalable UI."
+      ],
+      "challenges":[
+        {
+          "title": "Disorganized Feedback Management",
+          "description": "Users faced difficulties consolidating feedback from multiple sources, making it hard to track and utilize client testimonials effectively."
+        },
+        {
+          "title": "Inefficient Feedback Collection",
+          "description": "Gathering feedback, especially in video format, was time-consuming and required multiple tools, adding complexity to the process."
+        },
+        {
+          "title": "Limited Integration Capabilities",
+          "description": "Importing feedback from external sources like emails, social media, or other platforms was a manual process, leading to data silos and missed insights."
+        },
+        {
+          "title": "Lack of Customization for Display",
+          "description": "Importing feedback from external sources like emails, social media, or other platforms was a manual process, leading to data silos and missed insights."
+        }
+      ],
+      "features":[
+        {
+          "title": "Disorganized Feedback Management",
+          "description": "Users faced difficulties consolidating feedback from multiple sources, making it hard to track and utilize client testimonials effectively."
+        },
+        {
+          "title": "Inefficient Feedback Collection",
+          "description": "Gathering feedback, especially in video format, was time-consuming and required multiple tools, adding complexity to the process."
+        },
+        {
+          "title": "Limited Integration Capabilities",
+          "description": "Importing feedback from external sources like emails, social media, or other platforms was a manual process, leading to data silos and missed insights."
+        },
+        {
+          "title": "Lack of Customization for Display",
+          "description": "Importing feedback from external sources like emails, social media, or other platforms was a manual process, leading to data silos and missed insights."
+        }
+      ]      
+
     },
     {
       "id": 2,

@@ -1,10 +1,8 @@
 "use client"
 
-import { usePathname } from 'next/navigation'
 import React from 'react'
 
-const page = () => {
-    const pathname = usePathname()
+const Page = () => {
   return (
     <div>
 
@@ -12,4 +10,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
