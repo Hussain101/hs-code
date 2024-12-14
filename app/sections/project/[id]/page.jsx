@@ -137,7 +137,7 @@ const page = () => {
 							{/* Right Content */}
 							<div className="mt-8 md:mt-0 bg-yellow-400 md:ml-12 md:w-1/2">
 								<Image
-									src="/path-to-image.jpg"
+									src="https://digitalux.pk/wp-content/uploads/2024/10/Sheppard-2048x721.jpg"
 									alt="Man overwhelmed with notifications"
 									width={600}
 									height={400}
@@ -183,7 +183,7 @@ const page = () => {
 							<div className="flex items-center justify-center">
 								<div className="w-full h-full bg-gray-100 rounded-lg shadow-lg p-4">
 									<img
-										src="/path-to-image.jpg"
+										src="https://digitalux.pk/wp-content/uploads/2024/10/Sheppard-2048x721.jpg"
 										alt="Feature Visualization"
 										className="rounded-lg w-full h-auto"
 									/>
