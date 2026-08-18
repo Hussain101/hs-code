@@ -8,8 +8,8 @@ export function AppHeader() {
 	const isMobile = useMediaQuery();
  
 	return (
-		<header className="w-full py-5 sticky top-0 z-40 bg-[#0b0c0e]/85 backdrop-blur-md border-b border-white/10 flex justify-center">
-			<div className="container-md flex justify-between items-center gap-6">
+		<header className="w-full py-5 sticky top-0 z-40 bg-[#0b0c0e]/90 backdrop-blur-md border-b border-white/10 flex justify-center">
+			<div className="container-md flex items-center justify-between gap-6 w-full">
 				{/* Far Left Logo */}
 				<Link href={"/"} className="flex items-center gap-2.5 group shrink-0">
 					<div className="w-4 h-4 rounded-sm bg-white flex items-center justify-center font-mono font-bold text-[10px] text-black">
@@ -20,11 +20,11 @@ export function AppHeader() {
 					</span>
 				</Link>
 
-				{/* Far Right Navigation & Actions Group */}
-				<div className="flex items-center gap-6 md:gap-8">
+				{/* Far Right Nav Menu + Action Buttons */}
+				<div className="flex items-center justify-end gap-6 md:gap-8 flex-1">
 					{isMobile ? <MobileMenu /> : <Menu />}
 
-					<div className="flex items-center gap-4">
+					<div className="flex items-center gap-4 shrink-0">
 						{!isMobile && <ConnectMedia />}
 						<a
 							href="#contact"
