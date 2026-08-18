@@ -13,7 +13,7 @@ export function AboutSection() {
 		<LazyMotion features={domAnimation}>
 			<section id="about" className="section">
 				<HeadingDivider title="About me" />
-				<div className="pt-10 pb-16 max-w-5xl flex flex-col gap-3">
+				<div className="pt-8 pb-12 w-full flex flex-col gap-3">
 					<div
 						tabIndex="0"
 						ref={ref}
@@ -24,12 +24,8 @@ export function AboutSection() {
 							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
 						}}
 					>
-						<p>
-							A seasoned Computer Engineer with over two years of experience as a Full Stack Web Developer, specializing
-in React.js, Node.js, Next.js, and Angular.js. Proficient in creating dynamic, responsive web applications with
-a strong understanding of both front-end and back-end technologies. Demonstrated expertise in UI/UX design
-and server-side development, building robust, scalable solutions. Skilled in problem-solving, debugging, and
-optimizing code for performance. Passionate about staying updated with industry trends to deliver cuttingedge applications. Committed to collaborative development and effective communication within crossfunctional teams
+						<p className="text-slate-300 text-lg leading-relaxed font-normal">
+							Computer Engineer & Full Stack Engineer with 3+ years of experience building, testing, and shipping scalable web & mobile applications using React.js, Next.js, Node.js, Angular, TypeScript, and AI tools. Skilled in owning feature slices end-to-end — from clarifying scope with product stakeholders to backend implementation, UI/UX optimization, QA unit testing (Jest/Vitest), and automated deployment pipelines.
 						</p>
 						
 					</div>

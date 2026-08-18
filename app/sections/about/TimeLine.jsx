@@ -1,128 +1,83 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 
 const TimeLineData = [
-	{ year: 2023, text: "Start my journey as Full Stack Developer" },
-	{ year: 2022, text: "Start a 6 week MERN Stack Internshp" },
-	{ year: 2022, text: "Start a 6 week Frontend internship" }
+	{
+		year: "July 2023 - Present",
+		role: "Full Stack Engineer | Digitalux — Lahore",
+		text: "Accelerated full-cycle delivery (design → development → unit testing) using Claude & AI coding tools. Developed full-stack apps with React, Node.js, PostgreSQL & Next.js. Automated CI/CD with Docker and owned QA lifecycle with Jest/Vitest."
+	},
+	{
+		year: "July 2022 - July 2023",
+		role: "MERN Stack Developer | Digitalux — Remote",
+		text: "Built full-stack MERN applications with RESTful APIs, MongoDB schemas, JWT auth, and form validation in Agile standups."
+	},
+	{
+		year: "2019 - 2023",
+		role: "BS Computer Engineering | UET Taxila",
+		text: "Graduated with 3.18/4.0 GPA. Specialized in computer engineering, software design patterns, and full-stack software architecture."
+	}
 ];
 
 export function TimeLine() {
-	/// TODO: Add color mode support
-	const colorMode = "dark";
-	const [, setActiveItem] = useState(0);
 	const carouselRef = useRef(null);
-	// const animRef = useRef(null);
 	const isInView = useInView(carouselRef, { once: true });
 
-	const scroll = (node, left) => {
-		return node.scrollTo({ left, behavior: "smooth" });
-	};
-
-	const handleClick = (e, i) => {
-		e.preventDefault();
-
-		if (carouselRef.current) {
-			const scrollLeft = Math.floor(
-				carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
-			);
-
-			scroll(carouselRef.current, scrollLeft);
-		}
-	};
-
-	const handleScroll = () => {
-		if (carouselRef.current) {
-			const index = Math.round(
-				(carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) *
-					TimeLineData.length
-			);
-
-			setActiveItem(index);
-		}
-	};
-
-	useEffect(() => {
-		const handleResize = () => {
-			scroll(carouselRef.current, 0);
-		};
-
-		window.addEventListener("resize", handleResize);
-
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+	const stats = [
+		{ number: "3+", label: "Years Engineering Exp" },
+		{ number: "90%+", label: "Test Coverage Achieved" },
+		{ number: "20+", label: "Tech Stack & AI Tools" },
+		{ number: "100%", label: "End-to-End Ownership" }
+	];
 
 	return (
 		<LazyMotion features={domAnimation}>
-			<ul
-				ref={carouselRef}
-				onScroll={handleScroll}
-				className="flex flex-row flex-nowrap gap-5 justify-between overflow-x-auto snap-x cursor-pointer hide-scroll-bar"
-			>
-				<>
-					{TimeLineData.map((item, index) => {
-						return (
-							<li
-								id={`carousel__item-${index}`}
-								key={index}
-								className="flex flex-col gap-3 snap-start w-[calc((100%/2)-30px)] sm:w-1/3 md:w-1/6"
-								onClick={(e) => handleClick(e, index)}
-								style={{
-									transform: isInView
-										? "none"
-										: `${index === 0 ? "translateY(250px)" : `translateY(${200 / index}px)`}`,
-									opacity: isInView ? 1 : 0,
-									transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
-										index === 0 ? 0.5 : 1.05 * index
-									}s`
-								}}
-							>
-								<h3
-									tabIndex="0"
-									aria-label={"What do I do in " + item.year}
-									className="flex items-center gap-4 text-2xl font-bold"
-								>
-									{`${item.year}`}
-									<svg
-										width="208"
-										height="6"
-										viewBox="0 0 208 6"
-										xmlns="http://www.w3.org/2000/svg"
-										fill={colorMode === "dark" ? "#fff" : "#232323"}
-									>
-										<path
-											fillRule="evenodd"
-											clipRule="evenodd"
-											d="M2.5 5.5C3.88071 5.5 5 4.38071 5 3V3.5L208 3.50002V2.50002L5 2.5V3C5 1.61929 3.88071 0.5 2.5 0.5C1.11929 0.5 0 1.61929 0 3C0 4.38071 1.11929 5.5 2.5 5.5Z"
-											fillOpacity="0.5"
-										/>
-										<defs>
-											<linearGradient
-												id="paint0_linear"
-												x1="-4.30412e-10"
-												y1="0.5"
-												x2="208"
-												y2="0.500295"
-												gradientUnits="userSpaceOnUse"
-											>
-												<stop stopColor="#fff" />
-												<stop offset="0.79478" stopColor="#fff" stopOpacity="0" />
-											</linearGradient>
-										</defs>
-									</svg>
-								</h3>
-								<p className="tracking-wide " tabIndex="0">
-									{item.text}
-								</p>
-							</li>
-						);
-					})}
-				</>
-			</ul>
+			<div className="space-y-12">
+				{/* Key Stats Counter Highlights */}
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
+					{stats.map((stat, idx) => (
+						<div
+							key={idx}
+							className="p-5 rounded-2xl glass-card text-center hover:scale-[1.03] transition-all"
+						>
+							<div className="text-3xl md:text-4xl font-extrabold text-white font-mono">
+								{stat.number}
+							</div>
+							<div className="text-xs md:text-sm font-medium text-slate-400 mt-1">
+								{stat.label}
+							</div>
+						</div>
+					))}
+				</div>
+
+				{/* Visual Timeline */}
+				<div ref={carouselRef} className="relative border-l border-indigo-500/30 ml-4 md:ml-8 pl-6 space-y-10">
+					{TimeLineData.map((item, index) => (
+						<div
+							key={index}
+							className="relative group"
+							style={{
+								transform: isInView ? "none" : "translateX(-30px)",
+								opacity: isInView ? 1 : 0,
+								transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.2}s`
+							}}
+						>
+							{/* Glowing Bullet Node */}
+							<div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-slate-900 group-hover:scale-125 group-hover:bg-pink-500 transition-all duration-300 shadow-md shadow-indigo-500/50" />
+
+							<div className="p-6 rounded-2xl glass-panel hover:border-indigo-500/40 transition-all">
+								<span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
+									{item.year}
+								</span>
+								<h4 className="text-xl font-bold text-slate-100 mb-1">{item.role}</h4>
+								<p className="text-slate-400 text-sm leading-relaxed">{item.text}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
 		</LazyMotion>
 	);
 }

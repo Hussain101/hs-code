@@ -13,15 +13,17 @@ export function AppFooter() {
 		<LazyMotion features={domAnimation}>
 			<footer
 				ref={footerRef}
-				className="container-md py-10 mt-5 relative before:absolute before:top-0 before:left-4 before:w-[calc(100%-16px)] before:h-[1px] before:bg-gray-100"
+				className="w-full border-t border-slate-800/80 py-10 mt-16 bg-slate-950/40 backdrop-blur-sm flex justify-center"
 				style={{
-					transform: isInView ? "none" : "translateX(-200px)",
+					transform: isInView ? "none" : "translateY(20px)",
 					opacity: isInView ? 1 : 0,
-					transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s"
+					transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)"
 				}}
 			>
-				<div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-5">
-					<p className="font-light">Copyright &copy; {year} @HS-Code</p>
+				<div className="container-md flex flex-col md:flex-row justify-between items-center gap-6">
+					<p className="text-slate-400 text-sm">
+						Copyright &copy; {year} <span className="text-indigo-400 font-semibold">@HS-Code</span>. All rights reserved.
+					</p>
 					<ScrollTop />
 					<ConnectMedia />
 				</div>

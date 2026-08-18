@@ -10,4 +10,19 @@
 	.flex-center {
 		@apply flex items-center justify-center;
 	}
+	.glass-panel {
+		@apply bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-2xl;
+	}
+	.glass-card {
+		@apply bg-slate-800/40 backdrop-blur-md border border-white/10 hover:border-indigo-500/50 transition-all duration-300;
+	}
+	.text-gradient {
+		@apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
+	}
+	.glow-purple {
+		box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.3);
+	}
+	.glow-indigo {
+		box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.35);
+	}
 }

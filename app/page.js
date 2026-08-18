@@ -1,6 +1,6 @@
 "use client";
 
-import { WelcomeSection, AboutSection, TechnologiesSection, ProjectsSection } from "app/sections";
+import { WelcomeSection, AboutSection, TechnologiesSection, ProjectsSection, ContactSection } from "app/sections";
 
 export default function Page() {
 	return (
@@ -9,6 +9,7 @@ export default function Page() {
 			<AboutSection />
 			<ProjectsSection />
 			<TechnologiesSection />
+			<ContactSection />
 		</div>
 	);
 }

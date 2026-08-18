@@ -1,56 +1,58 @@
 import { AiFillHtml5, AiOutlineAntDesign, AiFillGithub, AiFillGitlab } from "react-icons/ai";
-import { DiCss3, DiVisualstudio } from "react-icons/di";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaReact, FaWordpressSimple, FaFigma, FaTrello } from "react-icons/fa";
-import { BsBootstrap } from "react-icons/bs";
-import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
-import { RiFlutterFill } from "react-icons/ri";
-import AdobeXDIcon from "public/assets/svg/adobexd.svg";
-import ZeplinIcon from "public/assets/svg/zeplin.svg";
-import WebstormIcon from "public/assets/svg/webstorm.svg";
-import JiraIcon from "public/assets/svg/jira.svg";
-import HeadlessUiIcon from "public/assets/svg/headlessui.svg";
-import MuiIcon from "public/assets/svg/mui.svg";
-import ChakraIcon from "public/assets/svg/chakraui.svg";
-import StyledIcon from "public/assets/svg/styledcomponents.svg";
+import { DiCss3, DiVisualstudio, DiPostgresql, DiMongodb, DiDocker } from "react-icons/di";
+import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
+import { FaReact, FaWordpressSimple, FaFigma, FaAws } from "react-icons/fa";
+import { BsBootstrap, BsCpu } from "react-icons/bs";
+import { TbBrandNextjs, TbBrandTailwind, TbBrandTypescript, TbBrandCypress } from "react-icons/tb";
 import { IconBrandMantine, IconBrandNotion, IconBrandReactNative } from "@tabler/icons-react";
+import MuiIcon from "public/assets/svg/mui.svg";
+import HeadlessUiIcon from "public/assets/svg/headlessui.svg";
 
 export const TECHNOLOGIES = [
 	{
-		category: "Mobile",
-		items: [{ name: "React Native", icon: <IconBrandReactNative  size={32} /> }]
-	},
-	{
-		category: "Front-end",
+		category: "Front-end & Mobile",
 		items: [
-			{ name: "HTML", icon: <AiFillHtml5 size={32} /> },
-			{ name: "CSS", icon: <DiCss3 size={32} /> },
-			{ name: "JS", icon: <IoLogoJavascript size={32} /> },
-			{ name: "React", icon: <FaReact size={32} /> },
-			{ name: "Next", icon: <TbBrandNextjs size={32} /> },
+			{ name: "React.js", icon: <FaReact size={32} /> },
+			{ name: "Next.js", icon: <TbBrandNextjs size={32} /> },
+			{ name: "TypeScript", icon: <TbBrandTypescript size={32} /> },
+			{ name: "React Native", icon: <IconBrandReactNative size={32} /> },
+			{ name: "JavaScript", icon: <IoLogoJavascript size={32} /> },
 			{ name: "Tailwind CSS", icon: <TbBrandTailwind size={32} /> },
-			{ name: "MUI", icon: <MuiIcon width={32} /> },
-			{ name: "AntD", icon: <AiOutlineAntDesign size={32} /> },
-			{ name: "Bootstrap", icon: <BsBootstrap size={32} /> },
-			{ name: "Chakra", icon: <ChakraIcon width={32} /> },
-			{ name: "HeadlessUI", icon: <HeadlessUiIcon width={32} /> },
-			{ name: "MantineUI", icon: <IconBrandMantine stroke={2} size={40} /> }
+			{ name: "Mantine UI", icon: <IconBrandMantine stroke={2} size={32} /> },
+			{ name: "Ant Design", icon: <AiOutlineAntDesign size={32} /> },
+			{ name: "MUI", icon: <MuiIcon width={32} /> }
 		]
 	},
 	{
-		category: "UI tools",
+		category: "Backend & Databases",
 		items: [
-			{ name: "Figma", icon: <FaFigma size={32} /> }
+			{ name: "Node.js", icon: <IoLogoNodejs size={32} /> },
+			{ name: "PostgreSQL", icon: <DiPostgresql size={32} /> },
+			{ name: "MongoDB", icon: <DiMongodb size={32} /> },
+			{ name: "Supabase", icon: <TbBrandNextjs size={32} /> },
+			{ name: "Strapi CMS", icon: <FaWordpressSimple size={32} /> },
+			{ name: "RESTful APIs", icon: <BsCpu size={32} /> }
 		]
 	},
 	{
-		category: "Other tools",
+		category: "DevOps, QA & Testing",
 		items: [
-			{ name: "WordPress CMS", icon: <FaWordpressSimple size={32} /> },
-			{ name: "Notion", icon: <IconBrandNotion size={40} /> },
-			{ name: "Github", icon: <AiFillGithub size={32} /> },
-			{ name: "Gitlab", icon: <AiFillGitlab size={32} /> },
-			{ name: "VsCode", icon: <DiVisualstudio size={32} /> }
+			{ name: "Docker", icon: <DiDocker size={32} /> },
+			{ name: "AWS (RDS)", icon: <FaAws size={32} /> },
+			{ name: "Jest / Vitest", icon: <TbBrandCypress size={32} /> },
+			{ name: "Cypress E2E", icon: <TbBrandCypress size={32} /> },
+			{ name: "CI/CD Pipelines", icon: <AiFillGithub size={32} /> },
+			{ name: "Git / GitHub", icon: <AiFillGithub size={32} /> }
+		]
+	},
+	{
+		category: "AI Tools & Workflow",
+		items: [
+			{ name: "Claude API & Code", icon: <BsCpu size={32} /> },
+			{ name: "OpenAI API", icon: <BsCpu size={32} /> },
+			{ name: "LangChain", icon: <BsCpu size={32} /> },
+			{ name: "Figma", icon: <FaFigma size={32} /> },
+			{ name: "Notion", icon: <IconBrandNotion size={32} /> }
 		]
 	}
 ];

@@ -11,56 +11,61 @@ export function TechnologiesSection() {
 
 	return (
 		<LazyMotion features={domAnimation}>
-			<section id="tech" className="section">
-				<HeadingDivider title="Technologies" />
+			<section id="tech" className="section py-20 relative">
+				<HeadingDivider title="Tech Stack & Skills" />
 				<p
 					ref={textRef}
 					tabIndex="0"
-					className="my-5 text-2xl"
+					className="mt-4 mb-12 text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed"
 					style={{
-						transform: isTextInView ? "none" : "translateX(-200px)",
+						transform: isTextInView ? "none" : "translateY(20px)",
 						opacity: isTextInView ? 1 : 0,
-						transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+						transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)"
 					}}
 				>
-					I work with the following technologies and tools:
+					A comprehensive toolkit of modern frameworks, libraries, databases, and development tools I leverage to engineer robust end-to-end digital solutions.
 				</p>
 
 				{!!TECHNOLOGIES.length && (
-					<div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+					<div ref={stackRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 						{TECHNOLOGIES.map((tech, index) => {
 							return (
 								<div
 									key={tech.category}
-									ref={stackRef}
-									className="flex flex-col gap-4 flex-1 md:flex-auto"
+									className="p-6 rounded-2xl glass-panel hover:border-indigo-500/40 transition-all duration-300 flex flex-col justify-between"
 									style={{
 										transform: isStackInView
 											? "none"
-											: `${index === 0 ? "translateY(250px)" : `translateY(${200 / index}px)`}`,
+											: `translateY(40px)`,
 										opacity: isStackInView ? 1 : 0,
-										transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
-											index === 0 ? 0 : 0.5 * index
-										}s`
+										transition: `all 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.15}s`
 									}}
 								>
-									<h3 tabIndex="0" className="text-2xl font-bold">
-										{tech.category}
-									</h3>
-									<div className="flex items-center flex-wrap gap-x-5 gap-y-8">
-										{tech.items.map((item) => (
-											<div key={item.name} className="group relative flex">
-												<span tabIndex="0" role="img">
-													{item.icon}
-												</span>
-												<span
-													className="group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2
-    -translate-x-1/2 translate-y-full opacity-0 mt-3 mx-auto px-2 w-max"
+									<div>
+										<div className="flex items-center justify-between mb-6 pb-3 border-b border-slate-800">
+											<h3 tabIndex="0" className="text-xl font-bold text-slate-100">
+												{tech.category}
+											</h3>
+											<span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+												{tech.items.length} Skills
+											</span>
+										</div>
+
+										<div className="grid grid-cols-2 gap-4">
+											{tech.items.map((item) => (
+												<div
+													key={item.name}
+													className="group p-3 rounded-xl bg-slate-800/40 hover:bg-indigo-950/40 border border-slate-700/50 hover:border-indigo-500/40 transition-all flex flex-col items-center justify-center text-center gap-2 cursor-pointer"
 												>
-													{item.name}
-												</span>
-											</div>
-										))}
+													<span className="text-3xl text-indigo-400 group-hover:scale-110 group-hover:text-pink-400 transition-transform duration-300">
+														{item.icon}
+													</span>
+													<span className="text-xs font-medium text-slate-300 group-hover:text-white">
+														{item.name}
+													</span>
+												</div>
+											))}
+										</div>
 									</div>
 								</div>
 							);
