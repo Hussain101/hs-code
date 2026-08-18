@@ -65,7 +65,7 @@ export function ContactSection() {
 							</a>
 
 							<a
-								href="https://linkedin.com"
+								href="https://www.linkedin.com/in/hussain-siddiqui-fullstack-forward-deployed-engineer/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="p-5 rounded-2xl glass-panel flex items-center gap-4 group hover:border-cyan-500/50 transition-all"

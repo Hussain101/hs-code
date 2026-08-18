@@ -5,7 +5,7 @@ export const SOCIAL_MEDIA = [
 		id: "linkedin",
 		icon: <BsLinkedin />,
 		title: "Visit LinkedIn profile",
-		url: "https://www.linkedin.com/in/mernstack-webdeveloper-reactjs-nextjs/"
+		url: "https://www.linkedin.com/in/hussain-siddiqui-fullstack-forward-deployed-engineer/"
 	},
 	{
 		id: "github",
