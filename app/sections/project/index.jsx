@@ -78,10 +78,10 @@ export function ProjectsSection() {
 						<button
 							key={cat}
 							onClick={() => setActiveCategory(cat)}
-							className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
+							className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
 								activeCategory === cat
-									? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/25"
-									: "bg-slate-800/60 text-slate-400 hover:text-slate-200 border border-slate-700/60"
+									? "bg-emerald-500 text-black font-bold shadow-md shadow-emerald-500/20"
+									: "bg-white/5 text-slate-400 hover:text-slate-200 border border-white/10 hover:bg-white/10"
 							}`}
 						>
 							{cat}

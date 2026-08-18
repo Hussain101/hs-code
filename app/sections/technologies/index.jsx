@@ -46,7 +46,7 @@ export function TechnologiesSection() {
 											<h3 tabIndex="0" className="text-xl font-bold text-slate-100">
 												{tech.category}
 											</h3>
-											<span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+											<span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
 												{tech.items.length} Skills
 											</span>
 										</div>
